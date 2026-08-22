@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="知华科技销售单智能助手系统，在提交审批前识别价格、信用、毛利与履约风险。预留 DeepSeek 兼容接口。">
+  <meta name="keywords" content="销售订单审核,订单风险识别,价格策略,客户信用,履约风险,DeepSeek Java,知华科技">
+  <title>ZhuaTech Sales Order AI｜知华科技销售单智能助手系统</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:#176b55;--accent-2:#2b8e72">
+  <aside class="sidebar">
+    <a class="brand" href="https://www.zhuatech.cn/" target="_blank"><span class="brand-mark">ZH</span><span><b>知华科技</b><small>SALES ORDER AI</small></span></a>
+    <div class="workspace-name"><span>企业工作空间</span><b>上海演示环境⌄</b></div>
+    <nav><button class="nav-item active"><span>▦</span>订单审查</button>
+      <button class="nav-item "><span>◇</span>价格策略</button>
+      <button class="nav-item "><span>✓</span>客户信用</button>
+      <button class="nav-item "><span>⌁</span>履约风险</button></nav>
+    <div class="side-card"><b>本地演示模式</b><p>不会调用外部模型，也不会上传真实业务数据。</p><a href="https://www.zhuatech.cn/" target="_blank">访问知华科技官网 ↗</a></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><p>智能销售订单 / 工作台</p><h1>销售单智能助手</h1></div><div class="top-actions"><button class="icon-button">⌕</button><button class="icon-button">?</button><span class="avatar">知</span></div></header>
+    <div class="content">
+      <section class="page-head"><div><h2>智能销售订单工作台</h2><p>在提交审批前识别价格、信用、毛利与履约风险</p></div><button class="primary" id="run-open">＋ 新建分析任务</button></section>
+      <section class="metrics"><article class="metric"><span>待审订单</span><strong>18</strong><small>较昨日 +8%</small></article>
+        <article class="metric"><span>风险订单</span><strong>4</strong><small>本周保持稳定</small></article>
+        <article class="metric"><span>毛利预警</span><strong>2</strong><small>需要优先处理</small></article>
+        <article class="metric"><span>今日通过</span><strong>36</strong><small>数据更新于 10:30</small></article></section>
+      <section class="workspace-grid">
+        <article class="panel queue-panel">
+          <header><div><h3>当前处理队列</h3><p>按风险和更新时间排序</p></div><div class="tools"><label>⌕<input id="search" placeholder="搜索记录"></label><button id="refresh">刷新</button></div></header>
+          <div class="table-wrap"><table><thead><tr><th>销售单号</th><th>客户</th><th>含税金额</th><th>风险</th><th>处理状态</th></tr></thead><tbody><tr data-keywords="SO-260822-018 华东智造有限公司 ¥ 186,400 中 待复核"><td><b>SO-260822-018</b></td><td>华东智造有限公司</td><td>¥ 186,400</td><td><span class="risk r0">中</span></td><td>待复核</td></tr>
+            <tr data-keywords="SO-260822-017 澄明供应链 ¥ 72,800 低 可提交"><td><b>SO-260822-017</b></td><td>澄明供应链</td><td>¥ 72,800</td><td><span class="risk r1">低</span></td><td>可提交</td></tr>
+            <tr data-keywords="SO-260821-063 海岳设备集团 ¥ 438,000 高 已拦截"><td><b>SO-260821-063</b></td><td>海岳设备集团</td><td>¥ 438,000</td><td><span class="risk r2">高</span></td><td>已拦截</td></tr></tbody></table></div>
+          <footer><span>显示 3 条重点记录</span><div><button>‹</button><b>1</b><button>›</button></div></footer>
+        </article>
+        <article class="panel insight-panel">
+          <header><div><span class="eyebrow">AI 辅助分析</span><h3>SO-260822-018</h3><p>华东区域设备销售单</p></div><span class="status">待人工确认</span></header>
+          <section class="summary"><b>分析摘要</b><p>该订单折扣处于授权区间，客户信用额度充足；交付日期与当前库存计划存在 3 天缺口，建议确认排产。</p></section>
+          <ul class="findings"><li><span>1</span><div><b>识别结果</b><p>客户剩余信用额度覆盖本单金额</p></div><em>94%</em></li>
+              <li><span>2</span><div><b>风险关注</b><p>综合毛利率 21.8%，高于最低策略线</p></div><em>82%</em></li>
+              <li><span>3</span><div><b>处理边界</b><p>承诺交期早于预计齐套日期 3 天</p></div><em>76%</em></li></ul>
+          <section class="actions"><b>建议动作</b><label><input type="checkbox"><span>提交订单审批并附交期说明</span></label>
+              <label><input type="checkbox"><span>通知计划员确认关键物料</span></label>
+              <label><input type="checkbox"><span>保留价格策略与审核快照</span></label></section>
+          <footer><button class="secondary">查看依据</button><button class="primary" id="approve">确认并进入流程</button></footer>
+        </article>
+      </section>
+      <div class="audit-line"><span>最后同步：2026-08-22 10:30</span><span>所有模型输出均需人工复核 · 上海如静知华信息科技有限公司</span></div>
+    </div>
+  </main>
+  <dialog id="run-dialog"><form method="dialog"><button class="close" value="cancel">×</button><span class="dialog-icon">订</span><h3>新建销售单智能助手任务</h3><p>填写演示对象与业务上下文，系统将执行本地确定性规则。</p><label>分析对象<input id="subject" value="SO-260822-018"></label><label>业务场景<input id="scenario" value="华东区域设备销售单"></label><label>补充上下文<textarea id="context">请结合当前业务规则给出可解释结果和后续动作。</textarea></label><label class="check"><input id="human-review" type="checkbox" checked> 结果进入人工复核队列</label><button class="primary wide" id="run-submit" value="default">运行演示分析</button><small id="run-status"></small></form></dialog>
+  <div class="toast" id="toast">已确认，任务进入后续流程</div><script src="app.js"></script>
+</body></html>

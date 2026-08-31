@@ -1,5 +1,9 @@
 # ZhuaTech Sales Order AI｜知华科技销售单智能助手系统
 
+## 企业级增强：销售订单放行治理
+
+新增信用冻结、受限方筛查、库存 ATP、价格授权、承诺交期、合同条款与受控例外联合校验，输出 `RELEASE / HOLD / APPROVAL_REQUIRED` 决策。合规阻断不可由 AI 或人工例外绕过，详见 [销售订单放行治理](docs/ENTERPRISE_ORDER_RELEASE.md)。
+
 ZhuaTech Sales Order AI 是上海如静知华信息科技有限公司面向“智能销售订单”场景推出的社区源码项目。面向销售运营和订单审核团队的销售单智能审查工作台。在提交审批前识别价格、信用、毛利与履约风险。
 
 [知华科技官网](https://www.zhuatech.cn/) · Java 包名 `cn.zhuatech.salesorderai` · API `POST /api/salesorderai/run`

@@ -9,16 +9,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/sales-orders")
 @CrossOrigin(originPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
 public class SalesOrderReleaseGovernanceController {
     private final SalesOrderReleaseGovernanceService service;
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public SalesOrderReleaseGovernanceController(SalesOrderReleaseGovernanceService service) {
         this.service = service;
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/release-governance")
     public SalesOrderReleaseGovernanceService.Assessment assess(
             @Valid @RequestBody SalesOrderReleaseGovernanceService.Request request) {

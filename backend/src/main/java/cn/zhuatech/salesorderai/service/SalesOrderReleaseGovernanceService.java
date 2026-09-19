@@ -7,9 +7,15 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SalesOrderReleaseGovernanceService {
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> hardBlockers = new ArrayList<>();
         List<String> controlExceptions = new ArrayList<>();
@@ -46,6 +52,9 @@ public class SalesOrderReleaseGovernanceService {
                 List.copyOf(actions), request.manualOverride() && request.overrideApproved());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(
             @NotBlank String orderNo,
             boolean creditHold,
@@ -58,6 +67,9 @@ public class SalesOrderReleaseGovernanceService {
             boolean overrideApproved) {
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(
             String orderNo,
             Decision decision,
@@ -66,5 +78,8 @@ public class SalesOrderReleaseGovernanceService {
             boolean controlledOverride) {
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { RELEASE, HOLD, APPROVAL_REQUIRED }
 }

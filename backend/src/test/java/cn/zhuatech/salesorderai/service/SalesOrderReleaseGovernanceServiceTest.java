@@ -5,9 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class SalesOrderReleaseGovernanceServiceTest {
     private final SalesOrderReleaseGovernanceService service = new SalesOrderReleaseGovernanceService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void releasesOrderWhenAllEnterpriseControlsPass() {
         var result = service.assess(new SalesOrderReleaseGovernanceService.Request(
@@ -18,6 +24,9 @@ class SalesOrderReleaseGovernanceServiceTest {
         assertThat(result.actions()).isEmpty();
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void cannotOverrideSanctionsFailure() {
         var result = service.assess(new SalesOrderReleaseGovernanceService.Request(
@@ -28,6 +37,9 @@ class SalesOrderReleaseGovernanceServiceTest {
         assertThat(result.controlledOverride()).isTrue();
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void routesApprovedBusinessExceptionsToFinalApproval() {
         var result = service.assess(new SalesOrderReleaseGovernanceService.Request(

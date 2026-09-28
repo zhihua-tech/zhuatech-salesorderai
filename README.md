@@ -1,5 +1,7 @@
 # ZhuaTech Sales Order AI｜知华科技销售单智能助手系统
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 企业级增强：销售订单放行治理
 
 新增信用冻结、受限方筛查、库存 ATP、价格授权、承诺交期、合同条款与受控例外联合校验，输出 `RELEASE / HOLD / APPROVAL_REQUIRED` 决策。合规阻断不可由 AI 或人工例外绕过，详见 [销售订单放行治理](docs/ENTERPRISE_ORDER_RELEASE.md)。
